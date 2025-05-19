@@ -1,0 +1,211 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<head>
+		<title>Abc products</title>
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+	
+		<link rel="icon" type="image/png" href="images/icons/favicon.ico"/>
+	
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/js/all.min.js" ></script>
+		
+		<link rel="stylesheet" type="text/css" href="css/main.css">
+
+<style>
+.button {
+  display: inline-block;
+  padding: 15px 25px;
+  font-size: 24px;
+  cursor: pointer;
+  text-align: center;
+  text-decoration: none;
+  outline: none;
+  color: #fff;
+  background-color: #4CAF50;
+  border: none;
+  border-radius: 15px;
+  box-shadow: 0 9px #999;
+
+}
+
+.button:hover {background-color: #3e8e41}
+
+.button:active {
+  background-color: #3e8e41;
+  box-shadow: 0 5px #666;
+  transform: translateY(4px);
+}
+</style>
+</head>
+	<body>
+		</head>
+		<header>
+			<div class="log">
+				<img class="log2" src="./images/Group 20399.svg" alt="log">
+			</div>
+		
+			<div class="container-logo">
+				<img class="logo" src="./images/logo.svg"alt="logo" >
+			</div>
+
+   		</header>
+      		<div class="header">
+	   			<h2>Invoice List</h2>
+   			</div>
+  		<div class="nav-button">
+	   		<button class="button" onclick="prevFunction()">Prev</button>  <button class="button" onclick="nextFunction()">Next</button>
+		</div>
+		<script>
+			document.addEventListener("DOMContentLoaded",function(){
+				populatedGridData(0,30);	
+			});
+				var pageNumber = 1;
+				var populatedGridData = (start,limit)=>{
+					const xhttp = new XMLHttpRequest();
+					xhttp.open("GET","http://localhost:8080//H2HBABBA1135//Grid.do?start="+start+"&limit="+limit,false);
+					xhttp.send();
+					var jsonData = JSON.parse(xhttp.responseText);
+					console.log(jsonData);
+					var tableData = '<tr><th> </th><th>business_code</th><th>cust_number</th><th>name_customer</th><th>clear_date</th><th>buisness_year</th><th>doc_id</th></tr>';
+					for(var i = 0 ; i < jsonData.length;i++)
+					{
+						tableData += "<td><input id="+'checkbox'+(i+1)+" type='checkbox'/></td><td>"+jsonData[i].business_code+"</td><td>"+jsonData[i].cust_number+"</td><td>"+jsonData[i].name_customer+"</td><td>"+jsonData[i].clear_date+"</td><td>"+jsonData[i].buisness_year+"</td><td>"+jsonData[i].doc_id+"</td></tr>";
+					}
+					document.getElementById("Highradius").innerHTML = tableData ;
+				}
+				function prevFunction()
+				{
+					if(pageNumber >= 2)
+					{
+						pageNumber-- ;
+					}
+					populatedGridData((pageNumber - 1)*30,30);
+				}
+				function nextFunction()
+				{
+					pageNumber++ ;
+					populatedGridData((pageNumber - 1)*30,30);
+				}							
+		</script>
+		
+		<div class="container-table">
+		
+			<div class="limiter">
+				
+				<div class="outline-table">
+					
+					<div class="table">
+						<form id="tabb">
+							<table calss ="Highradius" id="Highradius">
+								<tr>
+									<div class="modalbu">
+										<button type="button"  class="btn-primary"  id="myBtn"><i class="fas fa-plus"></i>
+											Add
+										</button>
+										<div id="myModal" class="modal">
+								
+											<div class="modal-content">
+											  <span class="close">&times;</span>
+											  <h5 class="modal-title">Add Invoice </h5>
+											  <hr class="upper-add">
+											  <form name="servlet" action="AddServlet" method="post">
+												  <div class="input-add" ></div>
+												  <label for="fname" class="text-add">Customer Name <span class="star">*</span></label>
+												  <input type="text" class=" inputbox-add"  name="name_customer" required>
+								
+												  <label for="fname" class="text-add1">Customer No. <span class="star">*</span></label>
+												  <input type="text" class=" inputbox-add1"  name="cust_number" required onkeypress='return event.charCode >= 48 && event.charCode <= 57'>
+								
+												  <label for="date" class="text-add2">Due Date <span class="star">*</span></label>
+												  <input type="date"  class=" inputbox-add2"  name="due_in_date" required>
+								
+												  <label for="in_no" class="text-add3">Invoice No.<span class="star">*</span></label>
+												  <input type="text" class=" inputbox-add3"  name="doc_id" required onkeypress='return event.charCode >= 48 && event.charCode <= 57'>
+								
+												  <label for="in_amo" class="text-add4">Invoice Amount <span class="star">*</span></label>
+												  <input type="text" class=" inputbox-add4"  name="total_open_amount" required onkeypress='return event.charCode >= 48 && event.charCode <= 57'>
+								
+												  <label for="notes" class="text-addbox">Notes</label>
+												  <textarea class="input-addbox" name="document_type" ></textarea>
+								
+												  <hr class="lower-add"> 
+												  <div> <a href="#" class="cancel-add">cancel</a></div>
+												  <div class="footer">
+													<button type="button" class="reset-add" onclick="reset()">Clear</button>
+													<input id="btn" class="save-add" type="submit" value="Submit" />
+												 </div>
+											  </form>
+											 
+											</div>
+										  
+										</div>
+										<button type="button" class="btn-primary"  id="myBtn1"><i class="fas fa-pen"></i>
+											Edit
+										</button>
+										<div id="myModal1" class="modal1">
+											<div class="modal-content1">
+												<span class="close1">&times;</span>
+									
+												<h5 class="modal-title">Edit Invoice</h5>
+												<hr class="edt-upper">
+												
+												
+												<form action="#" id="edit">
+													<div class="input0" ></div>
+													<label for="fname" class="input-text">Invoice Amount</label>
+													<input type="text" class=" input1"  name="invoice" required onkeypress='return event.charCode >= 48 && event.charCode <= 57' >
+													<div class="input" >
+														<h5 class="input-text1"> Notes</h5>
+														<textarea class="input2" name="message" ></textarea>
+														
+													</div>
+													<hr class="edt-lower">
+												  <div> <a href="#" class="cancel">cancel</a></div>
+												  <div class="footer">
+													<button type="button" class="reset" onclick="resFunction()">Reset</button>
+													<button type="submit" class="save">Save</button>
+												  </div>
+												</form>
+													  
+									
+											</div> 
+										
+										</div> 
+										<button type="button" class=" btn-primary" id="myBtn2" ><i class="fas fa-minus"></i>
+										 Delete
+										</button>
+										<div id="myModal2" class="modal2">
+								
+								
+											<div class="modal-content2">
+											  <span class="close2">&times;</span>
+											  <h5 class="modal-title">Delete record(s)?</h5>
+											  <hr class="upper-del">
+											  <span class="divider"></span>
+											  <p class="content"> You'll lose your record(s) after this action. We can't recover them once you delete.</p>
+											  <p class="contentin"> Are you sure you want to <span class="sp-del">permanently delete </span>them?</p>
+								
+											</div>
+											<hr class="lower-del">
+											<button type="button" class="bt-cancel" id="cancel">cancel</button>
+											<button type="button" class="delete">Delete</button>
+										  </div>
+
+									</div>
+									
+								</tr>
+												
+							</table>
+							 
+							</table>
+							
+						</form>
+						
+					</div>	
+				</div>
+			</div>
+		</div>
+		<script src="./js/main.js"></script>
+</body>
+</html>

@@ -1,0 +1,882 @@
+* {
+	margin: 0px; 
+	padding: 0px; 
+	box-sizing: border-box;
+}
+
+body, html {
+	height: 100%;
+	font-family: sans-serif;
+
+  background-color: #39495E;
+  color: #FFFFFF;
+}
+.modal-content
+{
+ background-color: #58687E;
+  
+}
+.modal-title
+{
+  
+color: #FFFFFF;
+
+}
+
+.btn-primary
+{
+	 background-color: transparent;
+width: 99px;
+height: 45px;
+border: 1px solid #14AFF1;
+border-radius: 10px;
+opacity: 1;
+color:#FFFFFF
+
+}
+.btn-primary:hover
+{
+	background-color:#666699;
+}
+.nav-button{
+  margin-top:1570px;
+  margin-left: 1670px;
+  position:relative;
+}
+
+.limiter {
+  width: 100%;
+  margin: 0 auto;
+}
+
+
+.container-table {
+  width: 1920px;
+  height: 930px;
+  top: 0px;
+  left: 0px;
+  background: transparent radial-gradient(closest-side at 50% 50%, #58687E 0%, #39495E 100%) 0% 0% no-repeat padding-box;;
+  opacity: 1;
+ 
+  
+}
+.cointainer-logo
+{
+  background-color: #39495E;
+  position: relative;
+  padding: 100px;
+}
+.logo
+{
+  position: absolute;
+  top: 22px;
+  left: 843px;
+  width: 235px;
+  height: 50px;
+  background: transparent url('img/logo.svg') 0% 0% no-repeat padding-box;
+opacity: 1;
+
+}
+.log2
+{
+  top: 16px;
+  position: relative;
+left: 30px;
+width: 289px;
+height: 52px;
+opacity: 1;
+
+opacity: 1
+}
+.header
+{
+  top: 106px;
+  left: 20px;
+  margin-top: 65px;
+  width: 300px;
+  height: 30px;
+  text-align: left;
+  font: normal normal normal 20px Ubuntu;
+  letter-spacing: 0px;
+  color: #FFFFFF;
+  opacity: 1;
+ 
+  
+  opacity: 1;
+  margin-left: 33px;
+}
+.outline-table {
+  width: 1170px;
+}
+
+
+table {
+
+  border-collapse: collapse;
+  border-radius: 10px;
+  top: 161px;
+  left: 30px;
+  width: 1860px;
+  height: 739px;
+  margin: 0 auto;
+  position: absolute;
+  background: #273D49CC 0% 0% no-repeat padding-box;
+   opacity: 1;
+ 
+}
+
+table * {
+  position: relative;
+}
+table td, table th {
+  padding-left: 8px;
+
+}
+
+table thead tr {
+  height: 60px;
+  background: #36304a;
+}
+table tbody tr {
+  height: 50px;
+}
+table tbody tr:last-child {
+  border: 0;
+}
+table td, table th {
+  text-align: left;
+}
+table td, table th {
+  text-align: right;
+}
+table td, table th {
+  text-align: center;
+}
+table td, table th {
+  text-align: center;
+}
+.control__indicator {
+  position: absolute;
+  top: 2px;
+  left: 0;
+  height: 20px;
+  width: 20px;
+  border-radius: 4px;
+  border: 2px solid #ccc;
+  background: transparent; }
+
+
+.table-head th{
+  font-family: OpenSans-Regular;
+  font-size: 18px;
+  color: #97A1A9;
+  line-height: 1.2;
+  font-weight: unset;
+}
+
+tbody tr:nth-child(even) {
+  background-color: #283A46;
+}
+
+tbody tr {
+  font-family: OpenSans-Regular;
+  font-size: 15px;
+  color: #FFFFFF;
+  line-height: 1.2;
+  font-weight: unset;
+}
+
+tbody tr:hover {
+  
+  cursor: pointer;
+  background: #2A5368 0% 0% no-repeat padding-box;
+}
+.column0
+{
+width: 16px;
+height: 16px;
+  opacity: 1
+
+}
+.column1 {
+  width: 260px;
+  padding-left: 50px;
+}
+
+.column2 {
+  width: 160px;
+}
+
+.column3 {
+  width: 245px;
+}
+
+.column4 {
+  width: 110px;
+  text-align: right;
+}
+
+.column5 {
+  width: 170px;
+  text-align: right;
+}
+
+.column6 {
+  width: 222px;
+  text-align: right;
+  padding-right: 62px;
+}
+
+
+
+@media screen and (max-width: 992px) {
+  table {
+    display: block;
+  }
+  table > *, table tr, table td, table th {
+    display: block;
+  }
+  table thead {
+    display: none;
+  }
+  table tbody tr {
+    height: auto;
+    padding: 37px 0;
+  }
+  table tbody tr td {
+    padding-left: 40% !important;
+    margin-bottom: 24px;
+  }
+  table tbody tr td:last-child {
+    margin-bottom: 0;
+  }
+  table tbody tr td:before {
+    font-family: OpenSans-Regular;
+    font-size: 14px;
+    color: #999999;
+    line-height: 1.2;
+    font-weight: unset;
+    position: absolute;
+    width: 40%;
+    left: 30px;
+    top: 0;
+  }
+  table tbody tr td:nth-child(1):before {
+    content: "Date";
+  }
+  table tbody tr td:nth-child(2):before {
+    content: "Order ID";
+  }
+  table tbody tr td:nth-child(3):before {
+    content: "Name";
+  }
+  table tbody tr td:nth-child(4):before {
+    content: "Price";
+  }
+  table tbody tr td:nth-child(5):before {
+    content: "Quantity";
+  }
+  table tbody tr td:nth-child(6):before {
+    content: "Total";
+  }
+
+  .column4,
+  .column5,
+  .column6 {
+    text-align: left;
+  }
+
+  .column4,
+  .column5,
+  .column6,
+  .column1,
+  .column2,
+  .column3 {
+    width: 100%;
+  }
+
+  tbody tr {
+    font-size: 14px;
+  }
+}
+
+@media (max-width: 576px) {
+  .container-table{
+    padding-left: 15px;
+    padding-right: 15px;
+  }
+}
+.modal {
+  display: none; 
+  position: fixed; 
+  z-index: 1; 
+  left: 0px;
+  top: 100px;
+  width: 100%;
+  height: 100%; 
+  overflow: auto; 
+  background-color: rgb(0,0,0); 
+  background-color: rgba(0,0,0,0.4);
+  animation:normal;
+}
+.modal1
+{
+  display: none; 
+  position: fixed; 
+  z-index: 1; 
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%; 
+  overflow: auto; 
+  background-color: rgb(0,0,0); 
+  background-color: rgba(0,0,0,0.4);
+}
+.modal2
+{
+  display: none; 
+  position: fixed; 
+  z-index: 1; 
+  left: 0;
+  top: 0;
+  justify-content: center;
+  width: 100%;
+  height: 100%; 
+  overflow: auto; 
+  background-color: rgb(0,0,0); 
+  background-color: rgba(0,0,0,0.4);
+}
+.modalbu{
+  position:absolute;
+  top:100px;
+  left: 1520px;
+
+}
+
+
+.modal-content {
+  top: 211px;
+left: 407px;
+margin-left: 450px;
+margin-top: 100px;
+width: 1106px;
+height: 509px;
+background: #2A3E4C 0% 0% no-repeat padding-box;
+box-shadow: 0px 8px 24px #00000029;
+border-radius: 6px;
+opacity: 1;
+}
+.modal-content1
+{
+  top: 210px;
+left: 689px;
+width: 543px;
+margin-left: 700px;
+margin-top: 150px;
+height: 511px;
+background: #2A3E4C 0% 0% no-repeat padding-box;
+box-shadow: 0px 8px 24px #00000029;
+border-radius: 6px;
+opacity: 1;
+}
+.modal-content2{
+  top: 294px;
+left: 654px;
+margin-top: 200px;
+margin-left: 675px;
+width: 611px;
+height: 342px;
+background: #2A3F4D 0% 0% no-repeat padding-box;
+box-shadow: 0px 8px 24px #00000029;
+border-radius: 6px;
+opacity: 1
+}
+
+.close {
+  color: rgb(247, 241, 241);
+  float: right;
+  font-size: 28px;
+  font-weight: bold;
+}
+.close1 {
+  color: rgb(247, 241, 241);
+  float: right;
+  font-size: 28px;
+  font-weight: bold;
+}
+.close2 {
+  color: rgb(247, 241, 241);
+  float: right;
+  font-size: 28px;
+  font-weight: bold;
+}
+.close:hover,
+.close:focus {
+  color: black;
+  text-decoration: none;
+  cursor: pointer;
+}
+.close1:hover,
+.close1:focus {
+  color: black;
+  text-decoration: none;
+  cursor: pointer;
+}
+.close2:hover,
+.close2:focus {
+  color: black;
+  text-decoration: none;
+  cursor: pointer;
+}
+.text-add
+{
+  top: 60px;
+  left: 20px;
+  width: 163px;
+  height: 23px;
+  text-align: left;
+  font: normal normal normal 17px/0px Ubuntu;
+  letter-spacing: 0.19px;
+  opacity: 1;
+  position: relative;
+}
+.text-add1
+{
+  top: 130px;
+  left: -420px;
+  width: 163px;
+  height: 23px;
+  text-align: left;
+  font: normal normal normal 17px/0px Ubuntu;
+  letter-spacing: 0.19px;
+  opacity: 1;
+  position: relative;
+
+}
+.text-add2
+{
+  top: 60px;
+  left: -290px;
+  width: 163px;
+  height: 23px;
+  text-align: left;
+  font: normal normal normal 17px/0px Ubuntu;
+  letter-spacing: 0.19px;
+  opacity: 1;
+  position: relative;
+}
+.text-add3
+{
+  top: 150px;
+  left: -285px;
+  width: 163px;
+  height: 23px;
+  text-align: left;
+  font: normal normal normal 17px/0px Ubuntu;
+  letter-spacing: 0.19px;
+  opacity: 1;
+  position: relative;
+}
+.text-add4
+{
+  top: 220px;
+  left: -690px;
+  width: 163px;
+  height: 23px;
+  text-align: left;
+  font: normal normal normal 17px/0px Ubuntu;
+  letter-spacing: 0.19px;
+  opacity: 1;
+  position: relative;
+}
+.text-addbox
+{
+  top: -110px;
+  left: 280px;
+  width: 163px;
+  height: 23px;
+  text-align: left;
+  font: normal normal normal 17px/0px Ubuntu;
+  letter-spacing: 0.19px;
+  opacity: 1;
+  position: relative;
+}
+
+.inputbox-add
+{
+  top: 60px;
+  left: 25px;
+  width: 300px;
+  height: 45px;
+  background: #283A46 0% 0% no-repeat padding-box;
+  border: 1px solid #356680;
+  border-radius: 10px;
+  opacity: 1;
+  color: white;
+  font: normal normal normal 19px/1px Ubuntu;
+  position: relative;
+}
+.inputbox-add1
+{
+  top: 130px;
+left: -390px;
+width: 300px;
+height: 45px;
+background: #283A46 0% 0% no-repeat padding-box;
+border: 1px solid #356680;
+border-radius: 10px;
+opacity: 1;
+color: white;
+font: normal normal normal 19px/1px Ubuntu;
+position: relative;
+}
+.inputbox-add2
+{
+  top: 15px;
+  left: 690px;
+  width: 300px;
+  height: 45px;
+  background: #283A46 0% 0% no-repeat padding-box;
+  border: 1px solid #356680;
+  border-radius: 10px;
+  color: white;
+  opacity: 1;
+  font: normal normal normal 15px Ubuntu;
+  position: relative;
+}
+.inputbox-add3
+{
+  top: 155px;
+left: -239px;
+width: 300px;
+height: 45px;
+background: #283A46 0% 0% no-repeat padding-box;
+border: 1px solid hsl(201, 41%, 35%);
+color: white;
+border-radius: 10px;
+font: normal normal normal 19px/1px Ubuntu;
+opacity: 1;
+position: relative;
+}
+.inputbox-add4
+{
+  top: 15px;
+  left: 160px;
+  width: 300px;
+  height: 45px;
+  background: #283A46 0% 0% no-repeat padding-box;
+  border: 1px solid #356680;
+  border-radius: 10px;
+  opacity: 1;
+  font: normal normal normal 19px/1px Ubuntu;
+  color: white;
+  position: relative;
+}
+
+.input-addbox
+{
+  top: 60px;
+  color: white;
+  left: 340px;
+  width: 300px;
+  height: 191px;
+  background: #283A46 0% 0% no-repeat padding-box;
+  border: 1px solid #356680;
+  border-radius: 10px;
+  opacity: 1; 
+  position: relative;
+}
+.save-add{
+  top: 550px;
+  left: 1440px;
+  width: 82px;
+  height: 45px;
+  background: #14AFF1 0% 0% no-repeat padding-box;
+  border-radius: 10px;
+  opacity: 1;
+  color: white;
+  position:absolute;
+}
+.reset-add
+{top: 550px;
+  left: 1320px;
+  width: 82px;
+  height: 45px;
+  border: 1px solid #14AFF1;
+  border-radius: 10px;
+  background-color: transparent;
+  opacity: 1;
+  color: white;
+  position:absolute;
+
+
+}
+.reset-add:hover
+{
+  background-color: #283A46;
+}
+.cancel-add
+{
+  top: 570px;
+left: 510px;
+width: 60px;
+height: 23px;
+text-align: left;
+font: normal normal normal 19px/1px Ubuntu;
+letter-spacing: 0px;
+color: #14AFF1;
+opacity: 1;
+text-decoration: none;
+position: absolute;
+}
+.cancel-add:hover
+{
+  color: white;
+}
+
+
+
+
+.modal-title
+{
+  top: 20px;
+  left: 20px;
+  width: 530px;
+  height: 91px;
+  background: #2A3E4C 0% 0% no-repeat padding-box;
+  border-radius: 10px 10px 0px 0px;
+  opacity: 1; 
+ position: relative;
+width: 300px;
+height: 31px;
+text-align: left;
+font: normal normal normal 28px/32px Ubuntu;
+letter-spacing: 0px;
+color: #FFFFFF;
+text-transform: capitalize;
+opacity: 1
+}
+.edt-upper
+{
+ top: 30px;
+ width: 543px;
+ position: relative;
+ border-color: #52626d;
+}
+hr.edt-lower
+{
+  position: relative;
+  top: 140px;
+  border-color: #52626d;
+
+
+}
+hr.upper-add
+{
+  top: 30px;
+ border-color: #52626d;
+ position:relative;
+}
+hr.lower-add
+{
+  top:100px;
+  border-color: #52626d;
+  position: relative;
+}
+
+
+hr.lower-del
+{
+  top:-85px;
+  width:600px;
+  left: 675px;
+  position: relative;
+  border-color: #52626d;
+
+}
+hr.upper-del
+{
+  top: 30px;
+  width:610px;
+  left: 0px;
+  position: relative;
+  border-color: #52626d;
+
+}
+.input-text{
+  top: 70px;
+left: 30px;
+width: 300px;
+height: 23px;
+text-align: left;
+font: normal normal normal 20px/24px Ubuntu;
+letter-spacing: 0.19px;
+color: #97A1A9;
+position:relative;
+
+}
+.input-text1
+{
+  top: 120px;
+left: 30px;
+width: 300px;
+height: 23px;
+text-align: left;
+font: normal normal normal 20px/24px Ubuntu;
+letter-spacing: 0.19px;
+color: #97A1A9;
+position: relative;
+
+}
+.input1
+{
+top: 73px;
+left: 55px;
+width: 300px;
+height: 45px;
+background: #283A46 0% 0% no-repeat padding-box;
+border: 1px solid #356680;
+border-radius: 10px;
+opacity: 1;
+position:relative;
+color: white;
+font: normal normal normal 20px/24px Ubuntu;
+
+} 
+.input1:hover
+{
+  border: slategrey ;
+}
+
+.input2
+{
+  top: 90px;
+left: 192px;
+width: 300px;
+height: 191px;
+background: #283A46 0% 0% no-repeat padding-box;
+border: 1px solid #356680;
+border-radius: 10px;
+opacity: 1;
+color: white;
+position: relative;
+}
+.input2:hover
+{
+  border: slategrey ;
+}
+.save{
+  top: 140px;
+  left: 350px;
+  width: 82px;
+  height: 45px;
+  background: #14AFF1 0% 0% no-repeat padding-box;
+  border-radius: 10px;
+  opacity: 1;
+  color: white;
+  position:relative;
+}
+.reset
+{top: 140px;
+  left: 340px;
+  width: 82px;
+  height: 45px;
+  border: 1px solid #14AFF1;
+  border-radius: 10px;
+  background-color: transparent;
+  opacity: 1;
+  color: white;
+  position:relative;
+
+
+}
+.reset:hover
+{
+  background-color: #283A46;
+}
+.cancel
+{
+  top: 170px;
+left: 40px;
+width: 60px;
+height: 23px;
+text-align: left;
+font: normal normal normal 19px/1px Ubuntu;
+letter-spacing: 0px;
+color: #14AFF1;
+opacity: 1;
+text-decoration: none;
+position: relative;
+}
+.cancel:hover
+{
+  color: white;
+}
+.contentin
+{
+  top: 60px;
+  font: normal normal normal 19px Ubuntu;
+  left: 59px;
+  position: relative;
+}
+
+.content
+{
+  top: 80px;
+left: 59px;
+width: 500px;
+height: 95px;
+text-align: left;
+letter-spacing: 0px;
+opacity: 1;
+position: relative;
+font: normal normal normal 19px Ubuntu;
+}
+.footer
+{
+  top: -70px;
+left: 1100px;
+width: 483px;
+height: 67px;
+opacity: 1;
+}
+
+
+.delete
+{
+  top: -68px;
+left: 1050px;
+width: 101px;
+height: 45px;
+background: #14AFF1 0% 0% no-repeat padding-box;
+border-radius: 10px;
+opacity: 1;
+position: relative;
+color: white;
+}
+
+.bt-cancel
+{
+  top: -68px;
+left: 1030px;
+width: 100px;
+height: 45px;
+background: #2C404E 0% 0% no-repeat padding-box;
+border: 1px solid #14AFF1;
+border-radius: 10px;
+opacity: 1;
+color: white;
+position: relative;
+}
+.bt-cancel:hover{
+  background-color:#283A46 ;
+}
+.star{
+  color: rgb(238, 74, 74);
+}
+.sp-del{
+
+    color: rgb(238, 74, 74);
+}
+
+
